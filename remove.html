@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Item</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Remove Item</h1>
+
+        <form method="POST">
+            <label for="bill_id">Enter Bill ID:</label>
+            <input type="text" id="bill_id" name="bill_id" required>
+            <button type="submit">Show Items</button>
+        </form>
+
+        {% if bill_id %}
+            <h2>Items in Bill ID: {{ bill_id }}</h2>
+            {% if items %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in items %}
+                        <tr>
+                            <td>{{ item[1] }}</td>
+                            <td>{{ item[2] }}</td>
+                            <td>{{ item[3] }}</td>
+                            <td>{{ item[4] }}</td>
+                            <td>
+                                <form method="POST" style="display:inline;">
+                                    <input type="hidden" name="bill_id" value="{{ item[0] }}">
+                                    <input type="hidden" name="remove_item" value="{{ item[1] }}">
+                                    <button type="submit" class="remove-btn">Remove</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No items found for this Bill ID.</p>
+            {% endif %}
+        {% endif %}
+        <br>
+        <a href="{{ url_for('home') }}" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
