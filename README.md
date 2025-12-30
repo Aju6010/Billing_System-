@@ -1,11 +1,11 @@
-# 🧾 Billing System
+#  Billing System
 
 A simple web-based billing application built with **Flask** and **CSV storage**.  
 It allows users to add items to a bill, remove items, and generate printable invoices with tax calculations.
 
 ---
 
-## 🚀 Features
+##  Features
 - Add items to a bill with **Bill ID, Item Name, Quantity, Price**
 - Remove items from an existing bill
 - Print invoice with **subtotal, 18% tax, and final amount**
@@ -14,7 +14,7 @@ It allows users to add items to a bill, remove items, and generate printable inv
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 - **Backend:** Python (Flask)
 - **Frontend:** HTML, CSS
 - **Storage:** CSV File
@@ -37,7 +37,7 @@ It allows users to add items to a bill, remove items, and generate printable inv
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 1. Clone this repository:  
    `git clone <your-repo-url>`  
    `cd Billing-System`  
@@ -53,13 +53,13 @@ It allows users to add items to a bill, remove items, and generate printable inv
 
 ---
 
-## 📌 Use Cases
+##  Use Cases
 - Small shops/vendors for simple billing  
 - Educational project to learn Flask & CSV handling  
 
 ---
 
-## 📑 Sample Bill Output
+##  Sample Bill Output
 **Bill ID:** 101  
 
 | Item Name | Quantity | Price | Total |  
@@ -73,5 +73,5 @@ It allows users to add items to a bill, remove items, and generate printable inv
 
 ---
 
-## 🙌 Acknowledgements
+##  Acknowledgements
 Developed as a practice project to understand **Flask routing, form handling, and CSV-based data storage**.
